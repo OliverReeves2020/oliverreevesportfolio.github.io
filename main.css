@@ -1,0 +1,183 @@
+
+
+@import url("assets/fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+
+
+/* Reset default margin and padding */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Set box-sizing to border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Set default font and background color */
+
+body, input, select, textarea,span{
+    color: #666;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    line-height: 1.65em;
+}
+
+
+/* Remove default list styling */
+ul, ol {
+    list-style: none;
+    color: #666;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+}
+
+/* Header section */
+#header {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+#header p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+#header .actions {
+    margin-top: 2rem;
+}
+
+#header .actions li {
+    margin: 0 0.5rem;
+}
+
+/* CV section */
+#CVsection {
+    padding: 4rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#CVsection h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#CVsection p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Two section */
+#Projects {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#Projects h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+
+/* Footer section */
+
+
+#footer {
+    padding: 3rem 0;
+    background-color: #333;
+
+    text-align: center;
+}
+
+#footer .icons li {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+}
+
+#footer .icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+/* Responsive Styles */
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    /* Adjust header padding */
+    #header {
+        padding: 6rem 0;
+    }
+
+    /* Adjust CV section padding */
+    #CVsection {
+        padding: 8rem 0;
+    }
+
+    /* Adjust Two section padding */
+    #Projects {
+        padding: 8rem 0;
+    }
+
+    /* Adjust footer padding */
+    #footer {
+        padding: 6rem 0;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    /* Reduce header padding */
+    #header {
+        padding: 2rem 0;
+    }
+
+    /* Reduce CV section padding */
+    #CVsection {
+        padding: 4rem 0;
+    }
+
+    /* Reduce Two section padding */
+    #Projects {
+        padding: 4rem 0;
+    }
+
+    /* Reduce footer padding */
+    #footer {
+        padding: 2rem 0;
+    }
+
+    /* Stack list items vertically */
+    #header .actions li {
+        display: block;
+        margin: 1rem 0;
+    }
+}
