@@ -7,34 +7,153 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
-<body class="is-preload">
+<body>
 
 <!-- Header -->
 <section id="header">
-    <div class="inner">
-        <span ><i class="icon brands fa-github"></i></span>
+    <div>
         <h1>Hi, I'm Oliver Reeves</h1>
         <p>I am a recent graduate in Computer Science, passionate about software development and eager to make my mark in the industry.</p>
         <ul class="actions special" style="display: flex; justify-content: center;" >
-            <li style="flex: 1; text-align: center;"><a href="#Projects" class="button scrolly">Projects</a></li>
-            <li style="flex: 1; text-align: center;"><a href="#CVsection" class="button scrolly">My CV</a></li>
+
+            <li style="flex: 1; text-align: right;"><a href="#CVsection" class="button">About Me</a></li>
+            <li style="flex: 1; text-align: left;"><a href="#Projects" class="button">Projects</a></li>
         </ul>
     </div>
 </section>
 <!-- One -->
 <section id="CVsection" class="main style1">
-    <div class="container">
-        <div class="row gtr-150">
-            <div class="col-6 col-12-medium">
-                <header class="major">
-                    <h2>this is my cv</h2>
-                </header>
-                <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-            </div>
-            <div class="col-6 col-12-medium imp-medium">
-                <span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
-            </div>
-        </div>
+    <div class="portfolio-section">
+        <h2>Profile</h2>
+        <p style="text-align: left; padding: 5vw">
+            I'm a hardworking and enthusiastic Computer Science BSc graduate currently undergoing volunteer work at King's College Hospital. With a strong programming background, effective communication, and a collaborative mindset, I thrive in fast-paced environments and enjoy tackling real-world projects.<br>
+
+            Having gained valuable hands-on experience through my volunteer work, I'm actively seeking a challenging position to further my skills and professional understanding. I bring dedication to teamwork, excellent communication skills, and a passion for continuous learning.<br>
+
+            Interacting with others and learning from different perspectives is something I truly enjoy. I am motivated to expand my skill set, staying up-to-date with the latest technologies and industry trends. If you're looking for a dedicated and adaptable computer science graduate driven to make a positive impact, I would be thrilled to be considered for your team</div>
+
+    <div class="portfolio-section">
+
+
+
+
+        <ul class="tabs" style="margin-bottom: 10px">
+            <li>
+                <input id="tab1" type="radio" name="tabs" checked />
+                <label for="tab1"><i class="fa-solid fa-code"></i>languages</label>
+                <div id="tab-panel1" class="tab-panel">
+                    <p>This is the content for the description panel.</p>
+                </div>
+            </li>
+            <li>
+                <input id="tab2" type="radio" name="tabs" />
+                <label for="tab2">Specifications</label>
+                <div id="tab-panel2" class="tab-panel">
+                    <p>Specifications content can go here.</p>
+                </div>
+            </li>
+            <li>
+                <input id="tab3" type="radio" name="tabs" />
+                <label for="tab3">Reviews</label>
+                <div id="tab-panel3" class="tab-panel">
+                    <p>Here we can display some reviews from our customers.</p>
+                </div>
+            </li>
+        </ul>
+
+
+
+        <h2><i class="fa-solid fa-code"></i>languages</h2>
+        <ul class="compact-list">
+            <li><i class="fa-brands cp"></i>C/C++</li>
+            <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+            <li>Dart</li>
+            <li><i class="fa-brands fa-html5"></i>HTML</li>
+            <li><i class="fa-brands fa-java"></i>Java</li>
+            <li><i class="fa-brands fa-square-js"></i>Java Script</li>
+            <li><i class="fa-brands fa-python"></i>Python (Pandas, Stata, Numpy)</li>
+            <li>SQL/Oracle</li>
+        </ul>
+    </div>
+
+    <div class="portfolio-section">
+        <h2>Specialized Skills</h2>
+        <ul class="compact-list">
+            <li>Software engineering (full stack, Front End, Back End)</li>
+            <li>Database Manipulation</li>
+            <li>Machine Learning</li>
+            <li>Data analysis</li>
+            <li>Data Structures</li>
+            <li>Web Services</li>
+            <li>Web API</li>
+            <li>Shell</li>
+            <li>Firebase</li>
+            <li>AWS</li>
+            <li>Azure</li>
+        </ul>
+    </div>
+
+    <div class="portfolio-section">
+        <h2>Operating Systems</h2>
+        <ul class="compact-list">
+            <li>Linux</li>
+            <li>macOS</li>
+            <li>Windows 10</li>
+        </ul>
+    </div>
+
+    <div class="portfolio-section">
+        <h2>Software</h2>
+        <ul class="compact-list">
+            <li>Various IDEs</li>
+            <li>GitHub (source code management)</li>
+            <li>Jenkins</li>
+            <li>Microsoft Office suite</li>
+        </ul>
+    </div>
+
+    <div class="portfolio-section">
+        <h2>General Skills</h2>
+        <ul class="compact-list">
+            <li>Analytical Skills</li>
+            <li>Communication</li>
+            <li>Critical Thinking</li>
+            <li>Flexibility</li>
+            <li>Leadership</li>
+            <li>Problem Solving</li>
+            <li>Teamwork</li>
+            <li>Time Management</li>
+        </ul>
+    </div>
+
+    <div class="portfolio-section">
+        <h2>Work Experience</h2>
+        <h3>Scientific Volunteer - Cold Spring Harbor Laboratory, Long Island, NY</h3>
+        <p>
+            Hammell Lab, July 2018<br>
+            The group of Professor Christopher Hammell in CSHL specializes in studying several attributes of gene networks and how changes may impact disease. I assisted with data analysis.
+        </p>
+        <ul>
+            <li>I developed a lightweight script to sort data into a readable format using Python with Pandas and Matplotlib libraries.</li>
+            <li>I learned how to sort through large amounts of data and created code that improved the analysis and displayed the data in a user-friendly format.</li>
+        </ul>
+        <p>
+            I gained an understanding of development processes in professional environments, working with various stakeholders such as supervisors and lab heads and reporting back my work to ensure it will make an impact on colleagues' workflows.
+        </p>
+
+        <h3>Volunteer Researcher - King's College London, August 2018</h3>
+        <p>
+            I wrote an application using Python for Professor Ana Donaldson (Biostatistics, King's College London), illustrating the Central Limit Theorem, a key concept in probability theory. The purpose was to use it as an illustration in lecture notes of Statistics courses aimed at PhD students or newly qualified researchers at King's College London.
+        </p>
+
+        <h3>Volunteer Trainee Statistical Assistant - King's College London, November 2022 - Currently</h3>
+        <p>
+            I am currently undertaking two tasks for Professor Ana Donaldson (King's College London):
+        </p>
+        <ul>
+            <li>Using Python (Pandas), I am calculating the means and the 95% confidence intervals for several patient characteristics.</li>
+            <li>I am revising the old practical tutorials using Python (Pandas and Stata packages) instead of SPSS.</li>
+        </ul>
     </div>
 </section>
 
@@ -60,13 +179,7 @@
         <li><a href="#" class="fa-brands fa-linkedin"><span>LinkedIn</span></a></li>
     </ul>
 </section>
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+
 
 </body>
 </html>

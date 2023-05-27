@@ -4,6 +4,18 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
 
+/* colour scheme */
+:root {
+    --background-color: #212121ff;
+    --background-color-secondary: #333333ff;
+    --accent: #E55E77ff;
+    --text: #EAE4E5ff;
+    --text-two: #CCCCCCff;
+}
+
+
+
+
 /* Reset default margin and padding */
 body,
 h1, h2, h3, h4, h5, h6,
@@ -25,17 +37,45 @@ dd {
 *::before,
 *::after {
     box-sizing: border-box;
+
 }
 
 /* Set default font and background color */
 
-body, input, select, textarea,span{
-    color: #666;
+body, input, select, textarea,span,div,section{
+    color: var(--text);
+    background-color: var(--background-color-secondary);
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16pt;
     font-weight: 300;
     line-height: 1.65em;
 }
+
+
+
+.button {
+    padding: 10px 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-transform: uppercase;
+    display:inline-block;
+    width: max-content;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1.5px solid var(--text);
+    transition: 0.3s ease;
+}
+
+.button:hover {
+
+    transform: translateX(5px) translateY(-5px);
+    box-shadow: -5px 5px var(--text);
+    transition: .3s ease;
+
+}
+
 
 
 /* Remove default list styling */
@@ -47,11 +87,56 @@ ul, ol {
     font-weight: 300;
 }
 
+
+.compact-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 10px; /* Gap between grid items */
+    margin-bottom: 10px;
+}
+
+.tabs {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif
+}
+.tabs li {
+    display: inline-block;
+
+}
+.tabs input[type="radio"] {
+    display: none;
+}
+.tabs label {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+}
+.tabs .tab-panel {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.tabs [id^="tab"]:checked + label {
+    background-color: black;
+    color: #fff;
+}
+.tabs [id^="tab"]:checked ~ [id^="tab-panel"] {
+    display: block;
+}
+
 /* Header section */
 #header {
     text-align: center;
     padding: 3rem 0;
-    background-color: #f9f9f9;
 }
 
 #header h1 {
@@ -76,7 +161,6 @@ ul, ol {
 /* CV section */
 #CVsection {
     padding: 4rem 0;
-    background-color: #fff;
     text-align: center;
 }
 
@@ -94,7 +178,6 @@ ul, ol {
 /* Two section */
 #Projects {
     padding: 4rem 0;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -110,8 +193,6 @@ ul, ol {
 
 #footer {
     padding: 3rem 0;
-    background-color: #333;
-
     text-align: center;
 }
 
