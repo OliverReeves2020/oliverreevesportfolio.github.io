@@ -51,7 +51,11 @@ body, input, select, textarea,span,div,section{
     line-height: 1.65em;
 }
 
-
+.subsection{
+    background-color: var(--background-color);
+    margin: 5vw;
+    border-radius: 15px;
+}
 
 .button {
     padding: 10px 20px;
@@ -94,44 +98,64 @@ ul, ol {
     grid-gap: 10px; /* Gap between grid items */
     margin-bottom: 10px;
 }
+details[open] summary ~ * {
+    animation: open 2s ease-in-out;
+}
 
-.tabs {
-    list-style: none;
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    width: 100%;
+    padding: 0.5rem 0;
     position: relative;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: sans-serif
-}
-.tabs li {
-    display: inline-block;
-
-}
-.tabs input[type="radio"] {
-    display: none;
-}
-.tabs label {
-    display: block;
     cursor: pointer;
-    padding: 10px 15px;
-    border-bottom: 0;
-    border-radius: 3px 3px 0 0;
-}
-.tabs .tab-panel {
-    display: none;
-    overflow: hidden;
-    width: 100%;
-    position: absolute;
-    left: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    list-style: none;
 }
 
-.tabs [id^="tab"]:checked + label {
-    background-color: black;
-    color: #fff;
+details summary:after {
+    content: '\f078';
+    /*noinspection CssUnresolvedCustomProperty*/
+    font: var(--fa-font-solid);
+    position: relative;
+    font-size: 1.75rem;
+    transform-origin: center;
+
 }
-.tabs [id^="tab"]:checked ~ [id^="tab-panel"] {
-    display: block;
+details[open] summary:before {
+    animation: open 1.5s ease-in-out;
 }
+details[open] summary:after {
+    content: '\f00d';
+    position: relative;
+    transform-origin: center;
+    animation: open 1.5s ease-in-out;
+
+}
+
+details summary {
+    outline: 0;
+}
+details p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+}
+
+
 
 /* Header section */
 #header {
