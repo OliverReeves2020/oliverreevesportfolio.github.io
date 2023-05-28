@@ -331,4 +331,9 @@ details p {
         display: block;
         margin: 1rem 0;
     }
+    .navigation-bar{
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+    }
 }
