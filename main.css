@@ -67,6 +67,21 @@ body, input, select, textarea,span,div,section{
 .work-experience ul {
     color: var(--text);
 }
+.work-experience li::before{
+
+    content: "\e4e2";
+    transform:rotate(49deg)translateY(6px)translateX(6px);
+    /*noinspection CssInvalidFunction,CssUnresolvedCustomProperty*/
+    font:var(--fa-font-solid);
+    position: absolute;
+    left: 0px;
+    color: var(--accent);
+}
+.work-experience li{
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
 
 .button {
     padding: 10px 20px;
@@ -317,10 +332,12 @@ details p {
     #header {
         padding: 2rem 0;
     }
-
+    .portfolio-section{
+        padding-top: 10vw;
+    }
     /* Reduce CV section padding */
     #CVsection {
-        padding: 4rem 0;
+        margin-top: 20vw;
     }
 
     /* Reduce Two section padding */
@@ -341,9 +358,10 @@ details p {
     .navigation-bar{
         display: flex;
         width: max-content;
+        max-width: 90vw;
         horiz-align: right;
         flex-direction: row;
-        overflow: scroll;
+
     }
     .column{
         horiz-align: center;
