@@ -11,7 +11,7 @@
 
 <!-- Header -->
 <section id="header">
-    <div>
+    <div class="header">
         <h1>Hi, I'm Oliver Reeves</h1>
         <p>I am a recent graduate in Computer Science, passionate about software development and eager to make my mark in the industry.</p>
         <ul class="actions special" style="display: flex; justify-content: center;" >
@@ -21,7 +21,7 @@
         </ul>
     </div>
 </section>
-<!-- One -->
+<!-- About ME section -->
 <section id="CVsection" class="main style1">
     <div class="portfolio-section">
         <h2>Profile</h2>
@@ -81,8 +81,61 @@
             <li>Microsoft Office suite</li>
         </ul></details></div>
     </div>
+<!-- work experience -->
+    <div class="work-experience">
 
-    <div class="portfolio-section">
+        <body>
+        <table>
+            <tr>
+                <td>
+        <div class="navigation-bar">
+            <button onclick="selectItem(0)">1</button>
+            <button onclick="selectItem(1)">2</button>
+            <button onclick="selectItem(2)">3</button>
+        </div></td>
+                <td>
+        <div class="carousel-container">
+            <div class="carousel-item active">
+                <h3>Scientific Volunteer - Cold Spring Harbor Laboratory, Long Island, NY</h3>
+                <p>
+                    Hammell Lab, July 2018<br>
+                    The group of Professor Christopher Hammell in CSHL specializes in studying several attributes of gene networks and how changes may impact disease. I assisted with data analysis.
+                </p>
+                <ul>
+                    <li>I developed a lightweight script to sort data into a readable format using Python with Pandas and Matplotlib libraries.</li>
+                    <li>I learned how to sort through large amounts of data and created code that improved the analysis and displayed the data in a user-friendly format.</li>
+                </ul>
+                <p>
+                    I gained an understanding of development processes in professional environments, working with various stakeholders such as supervisors and lab heads and reporting back my work to ensure it will make an impact on colleagues' workflows.
+                </p>
+            </div>
+            <div class="carousel-item">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div></td>
+
+            </tr>
+        </table>
+        <script>
+            function selectItem(index) {
+                const items = document.getElementsByClassName('carousel-item');
+                const buttons = document.getElementsByTagName('button');
+
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.remove('active');
+                    buttons[i].classList.remove('active');
+                }
+
+                items[index].classList.add('active');
+                buttons[index].classList.add('active');
+            }
+        </script>
+        </body>
+
+
         <h2>Work Experience</h2>
         <h3>Scientific Volunteer - Cold Spring Harbor Laboratory, Long Island, NY</h3>
         <p>

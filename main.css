@@ -49,12 +49,21 @@ body, input, select, textarea,span,div,section{
     font-size: 16pt;
     font-weight: 300;
     line-height: 1.65em;
+
+}
+
+.header{
+    padding: 10vw;
+    padding-bottom: 20vw;
 }
 
 .subsection{
     background-color: var(--background-color);
     margin: 5vw;
     border-radius: 15px;
+}
+.work-experience ul {
+    color: var(--text);
 }
 
 .button {
@@ -98,19 +107,40 @@ ul, ol {
     grid-gap: 10px; /* Gap between grid items */
     margin-bottom: 10px;
 }
-details[open] summary ~ * {
-    animation: open 2s ease-in-out;
-}
 
 
-@keyframes open {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.carousel-container {
+    position: relative;
+    display: flex;
+    width: 80vw;
+    height: 600px;
+    overflow: hidden;
 }
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navigation-bar button {
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
 
 details summary::-webkit-details-marker {
     display: none;
