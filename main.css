@@ -74,7 +74,7 @@ body, input, select, textarea,span,div,section{
     display:inline-block;
     width: max-content;
     background-color: var(--accent);
-    color: white;
+    color: var(--text);
     text-decoration: none;
     border-radius: 5px;
     border: 1.5px solid var(--text);
@@ -108,20 +108,36 @@ ul, ol {
     margin-bottom: 10px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
 
 .carousel-container {
     position: relative;
     display: flex;
     width: 80vw;
-    height: 600px;
+    height: 1000px;
     overflow: hidden;
+    font-size: 1.25rem;
 }
 
 .carousel-item {
     position: absolute;
+    display: block;
     top: 0;
     left: 0;
     opacity: 0;
+    height: fit-content;
     transition: opacity 0.5s;
 }
 
@@ -132,14 +148,14 @@ ul, ol {
 .navigation-bar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 10px;
+
 }
 
 .navigation-bar button {
     margin: 0 5px;
     padding: 5px 10px;
 }
+
 
 
 details summary::-webkit-details-marker {
