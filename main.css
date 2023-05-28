@@ -62,6 +62,7 @@ body, input, select, textarea,span,div,section{
     margin: 5vw;
     border-radius: 15px;
 }
+
 .work-experience ul {
     color: var(--text);
 }
@@ -112,7 +113,8 @@ ul, ol {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+
+
 }
 
 .column {
@@ -120,13 +122,15 @@ ul, ol {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+
 }
 
 .carousel-container {
+    text-align: left;
     position: relative;
     display: flex;
     width: 80vw;
-    height: 1000px;
+    height: 500px;
     overflow: hidden;
     font-size: 1.25rem;
 }
@@ -137,12 +141,13 @@ ul, ol {
     top: 0;
     left: 0;
     opacity: 0;
-    height: fit-content;
     transition: opacity 0.5s;
+    horiz-align: center;
 }
 
 .carousel-item.active {
     opacity: 1;
+    horiz-align: center;
 }
 
 .navigation-bar {
@@ -282,7 +287,7 @@ details p {
 /* Responsive Styles */
 
 /* For tablets and larger screens */
-@media (min-width: 768px) {
+@media (min-width: 781px) {
     /* Adjust header padding */
     #header {
         padding: 6rem 0;
@@ -290,12 +295,12 @@ details p {
 
     /* Adjust CV section padding */
     #CVsection {
-        padding: 8rem 0;
+
     }
 
     /* Adjust Two section padding */
     #Projects {
-        padding: 8rem 0;
+
     }
 
     /* Adjust footer padding */
@@ -305,7 +310,7 @@ details p {
 }
 
 /* For mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 780px) {
     /* Reduce header padding */
     #header {
         padding: 2rem 0;
@@ -342,7 +347,12 @@ details p {
         horiz-align: center;
     }
     .carousel-container{
+        text-align: left;
         vertical-align: top;
-        horiz-align: center;
+        position: relative;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        height: 800px;
     }
+
 }
