@@ -333,7 +333,16 @@ details p {
     }
     .navigation-bar{
         display: flex;
+        width: max-content;
+        horiz-align: right;
         flex-direction: row;
         overflow: scroll;
+    }
+    .column{
+        horiz-align: center;
+    }
+    .carousel-container{
+        vertical-align: top;
+        horiz-align: center;
     }
 }
