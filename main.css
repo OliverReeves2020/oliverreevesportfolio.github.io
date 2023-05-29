@@ -51,11 +51,25 @@ body, input, select, textarea,span,div,section{
     line-height: 1.65em;
 
 }
+b{
+    color: var(--accent);
+}
 
 .header{
     height: 60vw;
     margin-top: 10%;
     padding: 10vw ;
+}
+.section-heading{
+    text-align: left;
+}
+.section-heading::after{
+    content: "";
+
+    display: block;
+    width: 1px;
+    height: 100px;
+    background-color: var(--text-two);
 }
 
 .subsection{
@@ -63,7 +77,9 @@ body, input, select, textarea,span,div,section{
     margin: 5vw;
     border-radius: 15px;
 }
-
+.work-experience{
+    padding: 5vw;
+}
 .work-experience ul {
     color: var(--text);
 }
@@ -90,21 +106,21 @@ body, input, select, textarea,span,div,section{
     text-transform: uppercase;
     display:inline-block;
     width: max-content;
-    background-color: var(--accent);
-    color: var(--text);
+    color: var(--accent);
     text-decoration: none;
     border-radius: 5px;
-    border: 1.5px solid var(--text);
+    border: 1.5px solid var(--accent);
     transition: 0.3s ease;
 }
 
 .button:hover {
 
     transform: translateX(5px) translateY(-5px);
-    box-shadow: -5px 5px var(--text);
+    box-shadow: -5px 5px var(--accent);
     transition: .3s ease;
 
 }
+
 
 
 
@@ -177,8 +193,62 @@ ul, ol {
 .navigation-bar button {
     margin: 0 5px;
     padding: 5px 10px;
+    background-color: transparent;
+    color: var(--text-two);
+    border: 0;
+    border-left: 2px solid var(--text-two);
+    font-size: 1.1rem;
 
 }
+.navigation-bar button:hover{
+    background-color: var(--background-color);
+    color: var(--accent);
+
+}
+
+
+.side-strip-left{
+    position: fixed;
+    bottom: 0px;
+    left: 2vw;
+    right: auto;
+    z-index: 10;
+    background-color: transparent;
+
+}
+.side-strip-left ul{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+.side-strip-left ul li{
+    margin-top: 10px;
+
+}
+.side-strip-left ul li:hover a{
+    color: var(--accent);
+    transform: translateY(-4.5px);
+}
+
+
+.side-strip-left ul::after{
+    content: "";
+    margin-top: 20px;
+
+    display: block;
+    width: 1px;
+    height: 100px;
+    background-color: var(--text-two);
+}
+.side-strip-left ul li a{
+    color: var(--text-two);
+    font-size: 30px;
+    transition: transform 0.4s ease-out;
+
+}
+
 
 
 
@@ -324,6 +394,9 @@ details p {
     #footer {
         padding: 6rem 0;
     }
+    .footerIcons {
+        visibility: hidden;
+    }
 }
 
 /* For mobile devices */
@@ -361,8 +434,16 @@ details p {
         max-width: 90vw;
         horiz-align: right;
         flex-direction: row;
+        font-size: 1.25rem;
 
     }
+
+
+
+    .side-strip-left{
+        visibility: hidden;
+    }
+
     .column{
         horiz-align: center;
     }

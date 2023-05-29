@@ -26,7 +26,7 @@
 <!-- About ME section -->
 <section id="CVsection" class="main style1">
     <div class="portfolio-section">
-        <h2>Profile</h2>
+        <h2>About Me</h2>
         <p style="text-align: left; padding: 5vw">
 
             My interest in computer science and its various branches started back in xxxgcsex when i decided to mess around and craft little 'pranks' in python.<br>
@@ -89,20 +89,20 @@
 <!-- work experience -->
     <div class="work-experience">
 
-
-            <div class='row' style="padding: 5vw">
+            <h2 class="section-heading">Where I've Worked</h2>
+            <div class='row'>
                 <div class='column'>
                     <div class="navigation-bar">
-                        <button onclick="selectItem(0)" style="text-align: left">King's College London</button>
-                        <button onclick="selectItem(1)"style="text-align: left">King's College London</button>
-                        <button onclick="selectItem(2)"style="text-align: left">Cold Spring Harbor Laboratory</button>
+                        <button id="active-button" onclick="selectItem(0);changeColor(this);" style="text-align: left">King's College London</button>
+                        <button onclick="selectItem(1);changeColor(this);"style="text-align: left">King's College London</button>
+                        <button onclick="selectItem(2);changeColor(this);"style="text-align: left">Cold Spring Harbor Laboratory</button>
                     </div>
                 </div>
                 <div class='column'>
                     <div class="carousel-container">
                         <div class="carousel-item active">
-                            <h3>Volunteer Trainee Statistical Assistant @ King's College London</h3>
-                            <p>November 2022 - Currently</p>
+                            <h3>Volunteer Trainee Statistical Assistant <b>@ King's College London</b></h3>
+                            <p style="margin-bottom: 0">November 2022 - Currently</p>
                             <p>I am currently employed under the supervision of Professor Ana Donaldson at King's College London, where I am assigned the following tasks:
                             </p>
                             <ul>
@@ -111,8 +111,8 @@
                             </ul>
                         </div>
                         <div class="carousel-item">
-                            <h3>Volunteer Researcher - King's College London</h3>
-                            <p>August 2018</p>
+                            <h3>Volunteer Researcher <b>@ King's College London</b></h3>
+                            <p style="margin-bottom: 0">August 2018</p>
                             <p>
                                 An application was developed using Python for Professor Ana Donaldson, a renowned Biostatistics expert at King's College London. The Central Limit Theorem, a crucial concept in probability theory, was illustrated through this application. The purpose of its development was to provide an illustrative tool for inclusion in lecture notes of Statistics courses catered to PhD students or newly qualified researchers at King's College London</p>
                             <ul>
@@ -124,10 +124,9 @@
                             </ul>
                         </div>
                         <div class="carousel-item">
-                            <h3>Scientific Volunteer - Cold Spring Harbor Laboratory</h3>
-                            <p>Hammell Lab, July 2018</p>
-                            <p>
-                                Professor Christopher Hammell's group at CSHL specializes in studying gene networks and their potential implications for disease. I had the opportunity to contribute by assisting with data analysis.</p>
+                            <h3>Scientific Volunteer <b>@ Cold Spring Harbor Laboratory</b></h3>
+                            <p style="margin-bottom: 0">July 2018</p>
+                            <p>Professor Christopher Hammell's group at CSHL specializes in studying gene networks and their potential implications for disease. I had the opportunity to contribute by assisting with data analysis.</p>
                             <ul>
                                 <li>Developed a lightweight Python script utilizing Pandas and Matplotlib libraries to sort and format data for improved readability.</li>
                                 <li>Acquired skills in efficiently handling large datasets and implemented code enhancements to enhance analysis and facilitate user-friendly data presentation.</li>
@@ -151,7 +150,32 @@
                 items[index].classList.add('active');
                 buttons[index].classList.add('active');
             }
-        </script>
+
+            var lastClickedButton = null;
+
+            function changeColor(button) {
+                if (lastClickedButton !== null) {
+                    lastClickedButton.style.color = ""; // Reset the color of the previously clicked button
+                    lastClickedButton.style.borderColor= "";
+                }
+
+                // Change the color of the currently clicked button
+                button.style.color = "var(--accent)";
+                button.style.borderColor ="var(--accent)";
+                lastClickedButton = button; // Update the last clicked button reference
+            }
+
+
+
+            // Set default button as clicked initially
+            window.addEventListener("load", function() {
+                var defaultButton = document.getElementById("active-button");
+                changeColor(defaultButton);
+            });
+
+
+
+            </script>
 
     </div>
 </section>
@@ -171,12 +195,21 @@
 </section>
 
 
+<div  class="side-strip-left">
+    <ul>
+        <li><a href="https://github.com/OliverReeves2020?tab=repositories" class="fa-brands fa-github-square"></a></li>
+        <li><a href="https://www.linkedin.com/in/oliver-reeves-047451222/" class="fa-brands fa-linkedin"></a></li>
+    </ul>
+</div>
+
+
 <!-- Footer -->
 <section id="footer">
+    <div class="footerIcons">
     <ul class="icons">
         <li><a href="https://github.com/OliverReeves2020?tab=repositories" class="fa-brands fa-github-square"><span class="label">GitHub</span></a></li>
         <li><a href="#" class="fa-brands fa-linkedin"><span>LinkedIn</span></a></li>
-    </ul>
+    </ul></div>
 </section>
 
 
