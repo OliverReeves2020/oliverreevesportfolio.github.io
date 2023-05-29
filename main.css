@@ -8,6 +8,9 @@
 /*
 	Roboto Mono, 1, 1 italic, 100, 100 italic, 200, 200 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 600, 600 italic, 700, 700 italic
 */
+/* Please do not use this import in production. You can download this font from here https://fontstorage.com/font/source-code-pro?from=jb. */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,200&display=swap');
 
 
 /* colour scheme */
@@ -65,11 +68,37 @@ b{
     color: var(--accent);
 }
 
-.header{
+.hero{
     height: 60vw;
-    margin-top: 10%;
-    padding: 10vw ;
+    padding-top: 10vw;
+    padding-left: 20vw;
+    padding-right: 10vw;
 }
+.hero h1{
+    padding-top: 2vw;
+    text-align: left;
+    font-size: clamp(40px, 8vw, 100px);
+    padding-bottom: 2vw;
+}
+.hero h2{
+    padding-top: 2vw;
+    text-align: left;
+    font-size: clamp(40px, 8vw, 100px);
+    padding-bottom: 3vw;
+}
+.hero h3{
+    font-family: 'Source Code Pro', monospace;
+    font-style:normal;
+    font-size: 1rem;
+    color: var(--accent);
+}
+.hero p{
+    width: 40vw;
+}
+
+
+
+
 .section-heading{
     display: flex;
     -webkit-box-align: center;
@@ -106,6 +135,19 @@ b{
     background-color: var(--background-color);
     margin: 5vw;
     border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+.portfolio-section{
+    padding-left: 20vw;
+    padding-right: 20vw;
 }
 .work-experience{
     padding: 5vw;
@@ -341,11 +383,7 @@ details p {
     vertical-align: center;
 }
 
-#header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-}
+
 
 #header p {
     font-size: 1.25rem;
