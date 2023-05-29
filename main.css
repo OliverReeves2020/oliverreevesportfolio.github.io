@@ -73,6 +73,7 @@ b{
     padding-top: 10vw;
     padding-left: 20vw;
     padding-right: 10vw;
+
 }
 .hero h1{
     padding-top: 2vw;
@@ -146,6 +147,7 @@ b{
 
 
 .portfolio-section{
+    padding-top: 1vw;
     padding-left: 20vw;
     padding-right: 20vw;
 }
@@ -243,9 +245,9 @@ ul, ol {
     position: relative;
     display: flex;
     width: 70vw;
-    height: 500px;
     overflow: hidden;
     font-size: 1.25rem;
+
 }
 
 .carousel-item {
@@ -452,9 +454,11 @@ details p {
 /* Responsive Styles */
 
 /* For tablets and larger screens */
-@media (min-width: 781px) {
+@media (min-width: 1100px) {
     /* Adjust header padding */
-
+    .carousel-container{
+        height: 500px;
+    }
 
     /* Adjust CV section padding */
     #CVsection {
@@ -475,9 +479,17 @@ details p {
     }
 }
 
+
 /* For mobile devices */
-@media (max-width: 780px) {
+@media (max-width: 1099px) {
     /* Reduce header padding */
+    .hero{
+        height: fit-content;
+    }
+    .hero p{
+        width: 80vw;
+    }
+
     #header {
         padding: 2rem 0;
     }
@@ -529,7 +541,7 @@ details p {
         position: relative;
         margin-left: 10vw;
         margin-right: 10vw;
-        height: 800px;
+        height: 1300px;
     }
 
 }
