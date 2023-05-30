@@ -1,5 +1,6 @@
 window.addEventListener('scroll', function() {
     var fadeInElements = document.querySelectorAll('.fade-in');
+    var delay = 500; // Adjust the delay time (in milliseconds) between each item
 
     for (var i = 0; i < fadeInElements.length; i++) {
         var element = fadeInElements[i];
@@ -7,7 +8,9 @@ window.addEventListener('scroll', function() {
         var windowHeight = window.innerHeight;
 
         if (position < windowHeight) {
-            element.classList.add('visible');
+            setTimeout(function(item) {
+                item.classList.add('visible');
+            }, i * delay, element);
         }
     }
 });
