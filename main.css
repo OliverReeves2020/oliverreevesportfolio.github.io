@@ -42,6 +42,7 @@ dd {
 }
 body{
     counter-reset: css-counter 0
+
 }
 
 /* Set box-sizing to border-box */
@@ -141,6 +142,35 @@ b{
 
 
 
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+    counter-reset: navcounter 0;
+}
+.topnav-right li a{
+    text-decoration:none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: var(--text-two);
+    counter-increment: navcounter 1;
+    vertical-align: middle;
+
+}
+
+.topnav-right li a::before{
+    content: "0" counter(navcounter) ".";
+    margin-right: 5px;
+    color: var(--accent);
+    font-size: 2rem;
+    text-align: right;
+
+}
+.topnav-right li a:hover{
+    color: var(--accent);
+
+}
 
 
 
