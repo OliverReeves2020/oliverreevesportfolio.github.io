@@ -204,7 +204,8 @@ b{
 }
 .hover{
     transform: translateX(5px) translateY(-5px);
-
+    position: relative;
+    left: 25%;
     display:inline-block;
     width: max-content;
     color: var(--accent);
