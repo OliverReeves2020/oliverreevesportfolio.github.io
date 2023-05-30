@@ -487,11 +487,30 @@ details p {
 
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease-in;
+    transition: opacity 0.5s ease-in;
 }
 
 .fade-in.visible {
     opacity: 1;
+}
+.fade-load {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-load.visible {
+    opacity: 1;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
