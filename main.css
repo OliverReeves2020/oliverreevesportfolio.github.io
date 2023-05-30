@@ -134,7 +134,7 @@ b{
 }
 .subsection{
     background-color: var(--background-color);
-    margin: 5vw;
+    margin-top: 5vw;
     border-radius: 15px;
 }
 
@@ -204,13 +204,12 @@ b{
 }
 .hover{
     transform: translateX(5px) translateY(-5px);
-    position: relative;
-    left: 25%;
     display:inline-block;
     width: max-content;
     color: var(--accent);
     text-decoration: none;
     transition: 0.3s ease;
+    margin-left: 9vw;
 }
 
 .hover::after{
@@ -486,6 +485,16 @@ details p {
     text-decoration: none;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+
 
 /* Responsive Styles */
 
@@ -583,6 +592,11 @@ details p {
     }
     .compact-list{
         grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    }
+
+    .hover{
+        position: relative;
+        margin-left: 25%;
     }
 
 }
