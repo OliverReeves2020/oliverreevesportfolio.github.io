@@ -140,8 +140,148 @@ b{
 }
 
 
+#blur{
+
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width:100vw;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    animation: fadeIn 0.75s ease forwards;
 
 
+}
+#blur.visible{
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width:100vw;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    animation: fadeIn 0.75s ease forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.burg-nav {
+    position: absolute;
+    z-index: 1;
+}
+
+.nav-details {
+    position: absolute;
+    width: 50px;
+    z-index: 10;
+}
+
+.nav-details summary {
+    outline: none;
+}
+
+.nav-details[open] {
+    position: static;
+}
+
+.hamburger-menu{
+    position: absolute;
+    z-index: 5;
+    visibility: hidden;
+}
+
+#menu__toggle {
+    opacity: 0;
+    visibility: hidden;
+}
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+}
+
+
+
+.menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 5;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: var(--background-color-secondary);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
 
 /* Right-aligned section inside the top navigation */
 .topnav-right {
@@ -397,13 +537,11 @@ ul, ol {
 }
 
 
-
-
-details summary::-webkit-details-marker {
+#workdropdown details summary::-webkit-details-marker {
     display: none;
 }
 
-details summary {
+#workdropdown details summary {
     width: 100%;
     padding: 0.5rem 0;
     position: relative;
@@ -413,7 +551,7 @@ details summary {
     list-style: none;
 }
 
-details summary:after {
+#workdropdown details summary:after {
     content: '\f078';
     /*noinspection CssUnresolvedCustomProperty*/
     font: var(--fa-font-solid);
@@ -422,10 +560,10 @@ details summary:after {
     transform-origin: center;
 
 }
-details[open] summary:before {
+#workdropdown details[open] summary:before {
     animation: open 1.5s ease-in-out;
 }
-details[open] summary:after {
+#workdropdown details[open] summary:after {
     content: '\f00d';
     position: relative;
     transform-origin: center;
@@ -433,10 +571,10 @@ details[open] summary:after {
 
 }
 
-details summary {
+#workdropdown details summary {
     outline: 0;
 }
-details p {
+#workdropdown details p {
     font-size: 0.95rem;
     margin: 0 0 1rem;
     padding-top: 1rem;
@@ -647,5 +785,10 @@ details p {
         position: relative;
         margin-left: 25%;
     }
-
+    .topnav-right{
+        visibility: hidden;
+    }
+    .hamburger-menu{
+        visibility: visible;
+    }
 }

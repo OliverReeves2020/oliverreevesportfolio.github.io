@@ -38,3 +38,11 @@ window.addEventListener('load', function() {
     }
 });
 
+const menuToggle = document.getElementById('menu__toggle');
+const blurElement = document.getElementById('blur');
+
+menuToggle.addEventListener('change', () => {
+    blurElement.classList.toggle('visible', menuToggle.checked);
+});
+
+
