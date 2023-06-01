@@ -663,7 +663,7 @@ ul, ol {
 }
 .fade-load {
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.4s ease-in;
 }
 
 .fade-load.visible {
