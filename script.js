@@ -1,5 +1,5 @@
 var fadeInElements = document.querySelectorAll('.fade-in');
-var delay = 250; // Adjust the initial delay time (in milliseconds) between each item
+var delay = 200; // Adjust the initial delay time (in milliseconds) between each item
 var lastScrollTime = Date.now();
 var lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 var currentDelay = delay;
