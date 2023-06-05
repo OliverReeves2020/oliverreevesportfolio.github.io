@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Oliver Reeves Portfolio </title>
 
 </head>
 <body>
@@ -15,7 +16,7 @@
         <ol class="actions special" style="display: flex; justify-content: center;align-items: center;" >
         <li class="fade-load , slide-in" style="flex: 1; text-align: right;"><a href="#CVsection" >About Me</a></li>
             <li class="fade-load , slide-in" style="flex: 1; text-align: right;"><a href="#work" >Experience</a></li>
-            <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer" class="button , fade-load , slide-in" style="margin-left: 0vw">Resume</a>
+            <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer" class="button , fade-load , slide-in" style="margin-left: 0">Resume</a>
         </ol>
     </div>
 
@@ -54,16 +55,16 @@
         <h2 class="section-heading">About Me</h2>
         <div class='row , fade-in'>
             <div class='column'>
-            <p class="fade-in" style="text-align: left; padding: 2.5vw;padding-bottom: 0vw;">
+            <p class="fade-in" style="text-align: left; padding: 2.5vw 2.5vw 0;">
                 My interest in computer science and its various branches started back a decade ago
                 when i decided to mess around and craft little 'pranks' in python.</p>
-                <p class="fade-in" style="text-align: left; padding: 2.5vw;padding-bottom: 0vw;padding-top: 0vw;">
+                <p class="fade-in" style="text-align: left; padding: 0 2.5vw;">
                 Fast forward to today and I am hardworking and enthusiastic Computer Science BSc graduate
                 currently undergoing part time volunteer work at King's College Hospital.
                 With a strong programming background, effective communication, and a collaborative mindset,
                 I thrive in fast-paced environments and enjoy tackling real-world projects.</p>
 
-                <p class="fade-in" style="text-align: left; padding: 2.5vw;padding-bottom: 0vw;padding-top: 0vw;">
+                <p class="fade-in" style="text-align: left; padding: 0 2.5vw;">
                 Having gained valuable hands-on experience through my volunteer work and extensive academic background, I'm actively seeking a challenging position to further my skills and professional understanding. I bring dedication to teamwork, excellent communication skills, and a passion for continuous learning.
                 Interacting with others and learning from different perspectives is something I truly enjoy. I am motivated to expand my skill set, staying up-to-date with the latest technologies and industry trends. If you're looking for a dedicated and adaptable computer science graduate driven to make a positive impact
                 , I would be thrilled to be considered for your team</p></div>
@@ -135,8 +136,8 @@
                 <div class='column , fade-in'>
                     <div class="navigation-bar">
                         <button id="active-button" onclick="selectItem(0);changeColor(this);" style="text-align: left">King's College London</button>
-                        <button onclick="selectItem(1);changeColor(this);"style="text-align: left">King's College London</button>
-                        <button onclick="selectItem(2);changeColor(this);"style="text-align: left">Cold Spring Harbor Laboratory</button>
+                        <button onclick="selectItem(1);changeColor(this);" style="text-align: left">King's College London</button>
+                        <button onclick="selectItem(2);changeColor(this);" style="text-align: left">Cold Spring Harbor Laboratory</button>
                     </div>
                 </div>
                 <div class='column , fade-in'>
@@ -192,7 +193,7 @@
                 buttons[index].classList.add('active');
             }
 
-            var lastClickedButton = null;
+            let lastClickedButton = null;
 
             function changeColor(button) {
                 if (lastClickedButton !== null) {
@@ -210,7 +211,7 @@
 
             // Set default button as clicked initially
             window.addEventListener("load", function() {
-                var defaultButton = document.getElementById("active-button");
+                const defaultButton = document.getElementById("active-button");
                 changeColor(defaultButton);
             });
 
