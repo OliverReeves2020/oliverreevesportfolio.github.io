@@ -84,31 +84,29 @@ b{
     padding-bottom: 2vw;
 }
 .hero h2{
-    padding-top: 2vw;
     text-align: left;
     font-size: clamp(40px, 8vw, 100px);
-    padding-bottom: 3vw;
 }
 .hero h3{
     font-family: 'Source Code Pro', monospace;
     font-style:normal;
     font-size: 1rem;
     color: var(--accent);
+    padding-left: 10px;
 }
 .hero p{
     width: 40vw;
 }
 
 h2 span.typed-text {
-    padding-top: 2vw;
+    padding-left: 15px;
     text-align: left;
     font-size: clamp(40px, 8vw, 100px);
-    padding-bottom: 3vw;
     color: var(--accent);
 }
 h2 span.cursor {
     display: inline;
-    background-color: #ccc;
+    background-color: var(--accent);
     margin-left: 0.1rem;
     height: 100px;
     width: 4px;
@@ -117,13 +115,14 @@ h2 span.cursor {
 }
 h2 span.cursor.typing {
     animation: none;
+
 }
 @keyframes blink {
-    0%  { background-color: #ccc; }
-    49% { background-color: #ccc; }
+    0%  { background-color: var(--accent); }
+    49% { background-color: var(--accent); }
     50% { background-color: transparent; }
     99% { background-color: transparent; }
-    100%  { background-color: #ccc; }
+    100%  { background-color: var(--accent); }
 }
 
 .section-heading{
@@ -613,6 +612,7 @@ ul, ol {
 #header p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    padding-left: 10px;
 }
 
 #header .actions {
