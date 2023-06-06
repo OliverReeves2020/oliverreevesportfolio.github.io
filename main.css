@@ -248,6 +248,7 @@ h2 span.cursor.typing {
 }
 #menu__toggle:checked ~ .menu__box {
     right: 0 !important;
+    counter-reset: menucounter 0;
 }
 
 
@@ -302,7 +303,18 @@ h2 span.cursor.typing {
     font-weight: 600;
     text-decoration: none;
     transition-duration: .25s;
+    counter-increment: menucounter 1;
 }
+.menu__item::before{
+    content: "0" counter(menucounter) ".";
+    color: var(--accent);
+    font-size: 1rem;
+    text-align: right;
+    font-family: "Roboto Mono", serif;
+    font-style: italic;
+}
+
+
 .menu__item:hover {
     background-color: var(--background-color-secondary);
     color: var(--accent);
@@ -326,10 +338,12 @@ h2 span.cursor.typing {
 
 .topnav-right li a::before{
     content: "0" counter(navcounter) ".";
-    margin-right: 5px;
+
     color: var(--accent);
     font-size: 2rem;
     text-align: right;
+    font-family: "Roboto Mono", serif;
+    font-style: italic;
 
 }
 .topnav-right li a:hover{
