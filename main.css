@@ -92,7 +92,7 @@ b{
     font-style:normal;
     font-size: 1rem;
     color: var(--accent);
-    padding-left: 10px;
+
 }
 .hero p{
     width: 40vw;
@@ -627,8 +627,8 @@ ul, ol {
 #header p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    padding-left: 10px;
 }
+
 
 #header .actions {
     margin-top: 2rem;
@@ -730,6 +730,12 @@ ul, ol {
         padding-left: 15vw;
         padding-right: 10vw;
 
+    }
+    #header p {
+        padding-left: 10px;
+    }
+    .hero h3 {
+        padding-left: 10px;
     }
 
     .hover{
