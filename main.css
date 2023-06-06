@@ -105,11 +105,12 @@ h2 span.typed-text {
     color: var(--accent);
 }
 h2 span.cursor {
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
     background-color: var(--accent);
     margin-left: 0.1rem;
-    height: 100px;
-    width: 4px;
+    height: clamp(40px, 8vw, 100px);
+    width: clamp(4px, 4px, 10px);
     animation: blink 1s infinite;
 
 }
@@ -819,6 +820,17 @@ ul, ol {
 
     .column{
         horiz-align: center;
+    }
+    .navigation-bar button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: var(--text-two);
+        border: 0;
+        border-left: none;
+        border-bottom: 2px solid var(--text-two);
+        font-size: 1.1rem;
+
     }
     .carousel-container{
         text-align: left;
