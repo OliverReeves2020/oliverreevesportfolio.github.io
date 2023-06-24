@@ -341,7 +341,7 @@ h2 span.cursor.typing {
     content: "0" counter(navcounter) ".";
 
     color: var(--accent);
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: right;
     font-family: "Roboto Mono", serif;
     font-style: italic;
@@ -353,7 +353,46 @@ h2 span.cursor.typing {
 }
 
 
+.certificates{
+    padding-top: 10vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
 
+
+.scrolling{
+    position: relative;
+    align-self: center;
+    text-align: center;
+    height: fit-content;
+    width:50vw;
+    padding:10px;
+    white-space: nowrap;
+    overflow: auto;
+    margin:auto;
+}
+
+.badge {
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    display:inline-block;
+    width: max-content;
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid var(--accent);
+    transition: 0.3s ease;
+}
+
+.badge:hover {
+
+    transform: translateX(5px) translateY(-5px);
+    box-shadow: -5px 5px var(--accent);
+    transition: .3s ease;
+
+}
 
 
 
@@ -379,11 +418,14 @@ h2 span.cursor.typing {
     margin-bottom: 10px;
 }
 
-
-
-.project-section{
+.cert-section{
     padding-left: 5vw;
     padding-right: 5vw;
+}
+
+.project-section{
+    padding-left: 20vw;
+    padding-right: 20vw;
 }
 
 
@@ -450,7 +492,7 @@ ul, ol {
     list-style: none;
     color: #666;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-size: 16pt;
+    font-size: 1rem;
     font-weight: 300;
 }
 
@@ -654,6 +696,9 @@ ul, ol {
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }
+
+
+
 
 /* Two section */
 #Projects {
