@@ -184,7 +184,6 @@ h2 span.cursor.typing {
     background: rgba(33,33,33,0.5);
     backdrop-filter: blur(10px);
     z-index: 1;
-    animation: fadeIn 0.75s ease forwards;
 
 
 }
@@ -196,8 +195,9 @@ h2 span.cursor.typing {
     background: rgba(33,33,33,0.5);
     backdrop-filter: blur(10px);
     z-index: 1;
-    animation: fadeIn 0.75s ease forwards;
+    animation: fadeInBlur 0.75s ease forwards;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -483,6 +483,16 @@ h2 span.cursor.typing {
     transform: translate(-15px, -15px);
 }
 
+
+
+
+
+
+#workdropdown details:hover{
+    color: var(--accent);
+    transition: ease-in-out 0.1s ;
+
+}
 
 
 /* Remove default list styling */
@@ -857,6 +867,18 @@ ul, ol {
 
 
 }
+
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;transform: translateY(100%);
