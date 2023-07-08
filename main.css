@@ -934,6 +934,7 @@ ul, ol {
 }
 
 .card-inner li {
+    display: inline-block;
     float: left;
     padding-left: 10px;
     white-space: nowrap;
