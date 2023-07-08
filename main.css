@@ -436,6 +436,7 @@ h2 span.cursor.typing {
     text-transform: uppercase;
     display:inline-block;
     width: max-content;
+    background-color: var(--background-color-secondary);
     color: var(--accent);
     text-decoration: none;
     border-radius: 5px;
@@ -760,6 +761,129 @@ ul, ol {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    row-gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 1040px;
+    padding: 10px;
+
+}
+.card-grid.show-all {
+    max-height: none;
+
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+.card-hidden{
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+
+}
+.card-inner:hover{
+    /* CSS styles for the hover effect */
+    /* For example, you can add a box shadow and change the background color */
+    transform:translateY(-9px);
+    transition: ease 0.5s;
+}
+.card-inner:hover a{
+    /* CSS styles for the hover effect */
+    /* For example, you can add a box shadow and change the background color */
+    color: var(--accent);
+    transition: ease 0.5s;
+}
+.card-inner:hover h3{
+    color: var(--accent);
+    transition: ease 0.5s;
+}
+
+.card-inner i{
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 40px;
+
+}
+.card-inner{
+    padding: 2rem 1.75rem;
+}
+.card-inner .top{
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    margin-bottom: 35px;
+}
+.card-inner a{
+    font-size: 22px;
+    color: var(--text);
+    padding-bottom: 10px;
+}
+
+.card-inner ul{
+    text-align: left;
+}
+
+.card-inner li {
+    float: left;
+    padding-left: 5%;
+}
+
+.card-inner li:first-child {
+    padding-left: 0;
+}
+.card-inner h3, p{
+    text-align: left;
+}
+
+.card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    position: relative;
+
+
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;transform: translateY(0);
+    }
+
+
+}
+
+
+
+#see-more-button {
+    margin: 20px auto;
+}
+
 
 
 
