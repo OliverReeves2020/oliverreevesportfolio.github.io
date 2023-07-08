@@ -43,8 +43,9 @@ dd {
 
 }
 body{
-    counter-reset: css-counter 0
-
+    counter-reset: css-counter 0;
+    width: 100vw;
+    overflow-x: clip;
 }
 
 /* Set box-sizing to border-box */
@@ -159,9 +160,18 @@ h2 span.cursor.typing {
     font-weight: 400;
 }
 .subsection{
-    background-color: var(--background-color);
+
     margin-top: 5vw;
-    border-radius: 15px;
+
+
+    width: inherit;
+    height: inherit;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    position: relative;
+
 }
 
 
@@ -357,20 +367,10 @@ h2 span.cursor.typing {
     padding-top: 10vw;
     padding-left: 20vw;
     padding-right: 20vw;
+    padding-bottom: 10vw;
 }
 
 
-.scrolling{
-    position: relative;
-    align-self: center;
-    text-align: center;
-    height: fit-content;
-    width:50vw;
-    padding:10px;
-    white-space: nowrap;
-    overflow: auto;
-    margin:auto;
-}
 
 .badge {
     padding: 10px 20px;
@@ -397,7 +397,7 @@ h2 span.cursor.typing {
 
 
 .work-experience{
-    padding: 5vw;
+    padding: 0 300px;
 }
 .work-experience ul {
     color: var(--text);
@@ -423,10 +423,7 @@ h2 span.cursor.typing {
     padding-right: 5vw;
 }
 
-.project-section{
-    padding-left: 20vw;
-    padding-right: 20vw;
-}
+
 
 
 .button {
@@ -510,7 +507,7 @@ ul, ol {
 .row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+
 
 
 }
@@ -518,7 +515,7 @@ ul, ol {
 .column {
     display: flex;
     flex-direction: column;
-    flex: 1;
+
 
 }
 
@@ -526,12 +523,11 @@ ul, ol {
     text-align: left;
     position: relative;
     display: flex;
-    width: 70vw;
+    width: 50vw;
     overflow: hidden;
     font-size: 1.25rem;
 
 }
-
 .carousel-item {
     position: absolute;
     display: block;
@@ -767,15 +763,11 @@ ul, ol {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax( min(500px,100%), 1fr));
     grid-gap: 20px;
     row-gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
     overflow: hidden;
-    max-height: 1040px;
-    padding: 10px;
-
+    padding-top:10px;
 }
 .card-grid.show-all {
     max-height: none;
@@ -783,18 +775,16 @@ ul, ol {
 }
 
 .card {
-    width: 300px;
+    width: 100%;
     height: 300px;
     transition: all 0.2s;
     position: relative;
-    cursor: pointer;
 }
 .card-hidden{
     display: none;
     width: 300px;
     height: 300px;
     position: relative;
-    cursor: pointer;
     opacity: 0;
 
 }
@@ -937,6 +927,9 @@ ul, ol {
     .footerIcons {
         visibility: hidden;
     }
+    .project-section{
+        padding: 0 300px;
+    }
 }
 
 
@@ -948,6 +941,10 @@ ul, ol {
     }
     .hero p{
         width: 80vw;
+    }
+    .project-section{
+        padding: 0 25px;
+        box-sizing: inherit;
     }
 
     #header {
@@ -1011,9 +1008,8 @@ ul, ol {
         text-align: left;
         vertical-align: top;
         position: relative;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        height: 1300px;
+        width:100%;
+        height: 1400px;
     }
     .compact-list{
         grid-template-columns: repeat(2, 1fr); /* 3 columns */
@@ -1028,6 +1024,30 @@ ul, ol {
     }
     .mob-only{
         position: relative;
-        margin-left: 25%;
+        margin-left: 5%;
     }
+
+
+
+    .scrolling{
+        position: relative;
+        align-self: center;
+        text-align: center;
+        height: fit-content;
+        padding:10px;
+        white-space: nowrap;
+        overflow: auto;
+        margin:auto;
+        scroll-snap-type: x mandatory;
+    }
+    .scrolling > *{
+        scroll-snap-align: start;
+    }
+
+
+}
+
+@media (max-width: 480px){
+    .work-experience{
+    padding: 0 25px;}
 }
