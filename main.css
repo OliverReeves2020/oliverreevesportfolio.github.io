@@ -243,6 +243,7 @@ h2 span.cursor.typing {
 }
 
 #menu__toggle {
+    display: none;
     opacity: 0;
     visibility: hidden;
 }
