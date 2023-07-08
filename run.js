@@ -75,14 +75,7 @@ function createRepositoryCard(repo) {
         cardLanguages.appendChild(languageItem);
 
     });
-    // Add language elements with different colors
-    languages.forEach(language => {
-        const languageItem = document.createElement('li');
-        languageItem.textContent = language;
-        languageItem.style.color = getLanguageColor(language);
-        cardLanguages.appendChild(languageItem);
 
-    });
 
     // Append elements to the card
 
@@ -112,9 +105,20 @@ function createRepositoryCardHidden(repo) {
     const cardDescription = document.createElement('p');
     cardDescription.textContent = description;
 
+
+
     const cardLink = document.createElement('a');
     cardLink.href = html_url;
-    cardLink.textContent = 'View Repo';
+    cardLink.classList.add("fa-solid", "fa-arrow-up-right-from-square");
+
+    const icon = document.createElement('i');
+    icon.classList.add('fas', 'fa-code');
+
+
+    const cardTop =document.createElement('div');
+    cardTop.classList.add("top")
+    cardTop.appendChild(icon);
+    cardTop.appendChild(cardLink)
 
     const cardLanguages = document.createElement('ul');
     cardLanguages.classList.add('languages');
@@ -123,14 +127,18 @@ function createRepositoryCardHidden(repo) {
     languages.forEach(language => {
         const languageItem = document.createElement('li');
         languageItem.textContent = language;
-        languageItem.style.backgroundColor = getLanguageColor(language);
+        languageItem.style.color = getLanguageColor(language);
         cardLanguages.appendChild(languageItem);
+
     });
 
+
     // Append elements to the card
+
+
+    cardInner.appendChild(cardTop);
     cardInner.appendChild(cardTitle);
     cardInner.appendChild(cardDescription);
-    cardInner.appendChild(cardLink);
     cardInner.appendChild(cardLanguages);
     card.appendChild(cardInner);
 
@@ -166,28 +174,19 @@ async function scanPortfolioRepositories(githubUrl) {
 
     // Create repository cards
     const otherCardsDiv = document.getElementById('other-cards');
-    repositoryDetails.forEach(repo => {
-        const card = createRepositoryCard(repo);
-        otherCardsDiv.appendChild(card);
-    });
+    repositoryDetails.forEach((repo, index) => {
 
+        if (index >= 3) {
+            const card = createRepositoryCardHidden(repo);
+            otherCardsDiv.appendChild(card);
 
-    repositoryDetails.forEach(repo => {
-        const card = createRepositoryCard(repo);
-        otherCardsDiv.appendChild(card);
-    });
+        }
+        else{
+            const card = createRepositoryCard(repo);
+            otherCardsDiv.appendChild(card);
 
-    repositoryDetails.forEach(repo => {
-        const card = createRepositoryCardHidden(repo);
-        otherCardsDiv.appendChild(card);
-    });
-    repositoryDetails.forEach(repo => {
-        const card = createRepositoryCardHidden(repo);
-        otherCardsDiv.appendChild(card);
-    });
-    repositoryDetails.forEach(repo => {
-        const card = createRepositoryCardHidden(repo);
-        otherCardsDiv.appendChild(card);
+        }
+
     });
 
 

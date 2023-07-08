@@ -793,11 +793,10 @@ ul, ol {
 }
 .card-hidden{
     display: none;
-    width: 300px;
+    width: 100%;
     height: 300px;
     position: relative;
     opacity: 0;
-
 }
 .card-inner:hover{
     /* CSS styles for the hover effect */
