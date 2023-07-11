@@ -506,7 +506,9 @@ ul, ol {
     font-weight: 300;
 }
 
-
+.noteworth{
+    padding-top: 10rem;
+}
 .compact-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -791,12 +793,12 @@ ul, ol {
 }
 .project-card a:hover {
     color: var(--accent);
+    transition: color ease-in-out 0.75s;
 }
 
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #0087ca;
 }
 
 .hover-underline-animation::after {
@@ -1209,9 +1211,57 @@ ul, ol {
         position: relative;
 
     }
+    .project-card-image{
+        display: none;
+    }
+    #featuredProjects li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .project-card{
+        display: inline-block;
 
+        background-blend-mode: lighten;
+        background-color: var(--background-color);
 
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .project-1{
+        background:url("images/img.png");
+    }
+    .project-overline{
+        padding-left: 10px;
+    }
+    .project-title{
+        padding-left: 10px;
+    }
 
+    .project-card-content {
+        text-align: left;
+    }
+    .project-description{
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        padding: 0;
+        padding-left: 10px;
+        border-radius: 0;
+    }
+    .project-tech-list {
+        float: left;
+    }
+
+    .card-grid{
+        grid-template-columns: repeat(auto-fill, minmax( min(300px,100%), 1fr));
+    }
+    .hover-underline-animation::after {
+        transform-origin: bottom left; /* Change the grid column to span from the second column to the end */
+    }
+    .hover-underline-animation:hover::after {
+        transform-origin: bottom left; /* Change the grid column to span from the second column to the end */
+    }
 
     .scrolling{
         position: relative;
