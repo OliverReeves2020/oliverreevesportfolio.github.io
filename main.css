@@ -399,7 +399,10 @@ h2 span.cursor.typing {
 
 
 .work-experience{
-    padding: 0 300px;
+    justify-self: center;
+    width:max-content;
+    margin: 0 auto;
+
 }
 .work-experience ul {
     color: var(--text);
@@ -521,6 +524,7 @@ ul, ol {
 .row {
     display: flex;
     flex-direction: row;
+    width: max-content;
 
 
 
@@ -1223,13 +1227,15 @@ ul, ol {
 
         background-blend-mode: lighten;
         background-color: var(--background-color);
-
+        background-repeat: no-repeat;
         backdrop-filter: blur(10px);
         padding: 20px;
         border-radius: 8px;
     }
     .project-1{
         background:url("images/img.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
     .project-overline{
         padding-left: 10px;
