@@ -841,6 +841,14 @@ ul, ol {
 .project-card-image { grid-column: 1 / 3;
 
 }
+
+
+
+.project-card-image img{
+    height: 333px;
+    width:500px;
+    object-fit: cover;
+}
 .project-card-image:hover::before{
     background: transparent;
     transition: background 0.8s linear;
@@ -1221,6 +1229,7 @@ ul, ol {
     }
     .project-card-image{
         display: none;
+
     }
     #featuredProjects li{
         margin-top: 10px;
