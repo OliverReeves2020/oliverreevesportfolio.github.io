@@ -1186,6 +1186,9 @@ ul, ol {
     .row{
         flex-direction: column;
     }
+    .row2{
+        flex-direction: column;
+    }
 
 
     .side-strip-left{
