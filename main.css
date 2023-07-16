@@ -831,7 +831,10 @@ ul, ol {
     transform-origin: bottom left; /* Change the grid column to span from the second column to the end */
 }
 
-
+#featuredProjects{
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 .project-card-image,
 .project-card-content {
